@@ -16,6 +16,8 @@ public class Begin {
 		// TODO Auto-generated method stub
 		String s = new String();
 		s = "ff";
+		StringBuffer sb = new StringBuffer();
+		sb.append("ccc");
 
 	}
 
