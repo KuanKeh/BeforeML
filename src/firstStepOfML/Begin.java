@@ -4,13 +4,14 @@
 package firstStepOfML;
 
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
 import org.json.JSONObject;
 
 /**
- * @author ggy
+ * @author gyge
  *
  */
 public class Begin {
@@ -22,6 +23,7 @@ public class Begin {
 		// TODO Auto-generated method stub
 //		String s = new String();
 //		s = "ff";
+		distribute();
 
 	}
 	
@@ -73,5 +75,20 @@ public class Begin {
 		jb.put("kai", "mumu");
 		System.out.println(jb.toString());
 	}
-
+	
+	/**
+	 * 获得磁盘文件
+	 */
+	public static void distribute(){
+//		File subDir = new File("C:\\Users\\gyge\\AppData\\Roaming\\SPlayer\\SVPSub");
+		File dir = new File("D:\\");
+//		File[] subFiles = subDir.listFiles();
+		File[] file = dir.listFiles();
+		System.out.println("dir.length() = " + dir.length());
+		System.out.println("file.length = " + file.length);
+		for(int i = 0; i < file.length; i++){
+			System.out.println(file[i].getName() + "|| i = " + i);
+//			file[i].
+		}
+	}
 }
