@@ -27,7 +27,7 @@ public class Begin {
 		// TODO Auto-generated method stub
 //		String s = new String();
 //		s = "ff";
-		writeFile();
+		uToS();
 
 	}
 	
@@ -110,5 +110,14 @@ public class Begin {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+	/**
+	 * 把util Date转化为sql Date
+	 */
+	public static void uToS(){
+		java.util.Date d = new java.util.Date();
+		java.sql.Date d2 = new java.sql.Date(d.getTime());
+		System.out.println(d2);//2017-07-26 不需要format
 	}
 }
