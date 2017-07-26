@@ -1,7 +1,7 @@
 /**
  * 
  */
-package firstStepOfML;
+package beforeML;
 
 import java.io.File;
 
