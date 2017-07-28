@@ -38,7 +38,7 @@ public class Begin {
 		BufferedWriter bw = null;
 		try {
 			bw = new BufferedWriter(new FileWriter("D:\\testjavawrite.txt"));//原文件内容被清空
-//			bw = new BufferedWriter(new FileWriter("D:\\testjavawrit1e.txt",true));
+//			bw = new BufferedWriter(new FileWriter("D:\\testjavawrit1e.txt",true));//新内容增加在原文件后
 			bw.write("22f");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
