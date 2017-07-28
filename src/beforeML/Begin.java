@@ -114,10 +114,18 @@ public class Begin {
 	
 	/**
 	 * 把util Date转化为sql Date
+	 * 两者可以互相转化，方法相同
 	 */
 	public static void uToS(){
 		java.util.Date d = new java.util.Date();
 		java.sql.Date d2 = new java.sql.Date(d.getTime());
 		System.out.println(d2);//2017-07-26 不需要format
+	}
+	
+	/**
+	 * 文件拷贝
+	 */
+	public static void copy(){
+		
 	}
 }
