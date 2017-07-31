@@ -178,6 +178,7 @@ public class FileManipulate {
 		System.out.println(in);
 		Properties p = new Properties();
 		try {
+			//用于读取非src路径下的文件
 //			p.load(new FileInputStream(System.getProperty("user.dir")+"\\properties\\start.properties"));
 			p.load(in);
 		} catch (IOException e) {
