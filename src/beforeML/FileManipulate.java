@@ -179,7 +179,6 @@ public class FileManipulate {
 //			p.load(new FileInputStream(System.getProperty("user.dir")+"\\properties\\everything.properties"));
 			p.load(in);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		p.list(System.out);
