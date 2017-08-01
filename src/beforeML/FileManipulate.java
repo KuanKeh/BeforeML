@@ -172,12 +172,14 @@ public class FileManipulate {
 	 * 读取Property文件
 	 */
 	public static void loadProperties(){
-		//方法
-		InputStream in = FileManipulate.class.getResourceAsStream("D:\\everything.properties");
+		//以下两种写法都可以  getResourceAsStream只能获得src下面的文件，/开头则从src路径开始计算，无/开头则从当前class文件的路径下计算。
+		InputStream in = FileManipulate.class.getResourceAsStream("/beforeML/everything.properties");
+//		InputStream in = FileManipulate.class.getResourceAsStream("everything.properties");
 		System.out.println(in);
 		Properties p = new Properties();
 		try {
-//			p.load(new FileInputStream(System.getProperty("user.dir")+"\\properties\\everything.properties"));
+			//用于读取非src路径下的文件
+//			p.load(new FileInputStream(System.getProperty("user.dir")+"\\properties\\start.properties"));
 			p.load(in);
 		} catch (IOException e) {
 			e.printStackTrace();
