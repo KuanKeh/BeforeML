@@ -172,6 +172,7 @@ public class FileManipulate {
 	 * 读取Property文件
 	 */
 	public static void loadProperties(){
+		//方法
 		InputStream in = FileManipulate.class.getResourceAsStream("D:\\everything.properties");
 		System.out.println(in);
 		Properties p = new Properties();
