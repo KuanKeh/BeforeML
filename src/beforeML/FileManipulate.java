@@ -31,7 +31,7 @@ public class FileManipulate {
 	private static int x = 0;
 	
 	/**
-	 * »ñµÃ´ÅÅÌÎÄ¼ş
+	 * è·å¾—ç£ç›˜æ–‡ä»¶
 	 */
 	public static void distribute(File dir){
 		File[] file = dir.listFiles();
@@ -47,11 +47,11 @@ public class FileManipulate {
 	}
 	
 	/**
-	 * ÎÄ¼ş¿½±´
+	 * æ–‡ä»¶æ‹·è´
 	 */
 	public static void copy(){
-		File f1 = new File("D:\\ĞÜĞÜÈı¼ú¿Í.We.Bare.Bears.S01E10.720p.HDTV.x264.Ë«Óï×ÖÄ»-ÉîÓ°×ÖÄ»×é.mkv");
-		File f2 = new File("D:\\123\\ĞÜĞÜÈı¼ú¿Í.We.Bare.Bears.S01E10.720p.HDTV.x264.Ë«Óï×ÖÄ»-ÉîÓ°×ÖÄ»×é.mkv");
+		File f1 = new File("D:\\ç†Šç†Šä¸‰è´±å®¢.We.Bare.Bears.S01E10.720p.HDTV.x264.åŒè¯­å­—å¹•-æ·±å½±å­—å¹•ç»„.mkv");
+		File f2 = new File("D:\\123\\ç†Šç†Šä¸‰è´±å®¢.We.Bare.Bears.S01E10.720p.HDTV.x264.åŒè¯­å­—å¹•-æ·±å½±å­—å¹•ç»„.mkv");
 		FileInputStream in = null;
 		FileOutputStream out = null;
 		long begin = System.currentTimeMillis();
@@ -92,13 +92,13 @@ public class FileManipulate {
 	}
 	
 	/**
-	 * ÎÄ¼ş¿½±´
+	 * æ–‡ä»¶æ‹·è´
 	 */
 	public static void copy1(){
-		String fileName = "ĞÜĞÜÈı¼ú¿Í.We.Bare.Bears.S01E10.720p.HDTV.x264.Ë«Óï×ÖÄ»-ÉîÓ°×ÖÄ»×é.mkv";//ÎÄ¼şÃû
-		String sourceDir = "D:\\";//Ô­Â·¾¶  pwd
-		File sourceExist = new File(sourceDir);//Ô­Â·¾¶  cd
-		File[] sourceFiles = sourceExist.listFiles();//Ô­Â·¾¶ÎÄ¼şÁĞ±í  ls
+		String fileName = "ç†Šç†Šä¸‰è´±å®¢.We.Bare.Bears.S01E10.720p.HDTV.x264.åŒè¯­å­—å¹•-æ·±å½±å­—å¹•ç»„.mkv";//æ–‡ä»¶å
+		String sourceDir = "D:\\";//åŸè·¯å¾„  pwd
+		File sourceExist = new File(sourceDir);//åŸè·¯å¾„  cd
+		File[] sourceFiles = sourceExist.listFiles();//åŸè·¯å¾„æ–‡ä»¶åˆ—è¡¨  ls
 		System.out.println("sourceExist.getClass = "+sourceExist.getClass());
 		System.out.println("sourceFiles.getClass = "+sourceFiles.getClass());
 		boolean sExist = false;
@@ -110,11 +110,11 @@ public class FileManipulate {
 			}
 		}
 		if(!sExist){
-			System.out.println("Ô´ÎÄ¼ş²»´æÔÚ£¬Çë¼ì²éÎÄ¼şÃû¡£");
+			System.out.println("æºæ–‡ä»¶ä¸å­˜åœ¨ï¼Œè¯·æ£€æŸ¥æ–‡ä»¶åã€‚");
 		}else{
-			String distanceDir = "D:\\123\\";//Ä¿µÄÄ¿Â¼
-			File distanceExist = new File(distanceDir);//Ä¿µÄÄ¿Â¼
-			File[] distanceFiles = distanceExist.listFiles();//Ä¿µÄÄ¿Â¼ÎÄ¼şÁĞ±í
+			String distanceDir = "D:\\123\\";//ç›®çš„ç›®å½•
+			File distanceExist = new File(distanceDir);//ç›®çš„ç›®å½•
+			File[] distanceFiles = distanceExist.listFiles();//ç›®çš„ç›®å½•æ–‡ä»¶åˆ—è¡¨
 			boolean dExist = false;
 			for(int j = 0; j < distanceFiles.length; j++){
 				if(fileName.equals(distanceFiles[j].getName())){
@@ -123,7 +123,7 @@ public class FileManipulate {
 				}
 			}
 			if(dExist){
-				System.out.println("Ä¿µÄÎÄ¼şÒÑ´æÔÚ¡£");
+				System.out.println("ç›®çš„æ–‡ä»¶å·²å­˜åœ¨ã€‚");
 			}else{
 				try {
 					File f1 = new File(sourceDir+fileName);
@@ -169,16 +169,16 @@ public class FileManipulate {
 	}
 	
 	/**
-	 * ¶ÁÈ¡PropertyÎÄ¼ş
+	 * è¯»å–Propertyæ–‡ä»¶
 	 */
 	public static void loadProperties(){
-		//ÒÔÏÂÁ½ÖÖĞ´·¨¶¼¿ÉÒÔ  getResourceAsStreamÖ»ÄÜ»ñµÃsrcÏÂÃæµÄÎÄ¼ş£¬/¿ªÍ·Ôò´ÓsrcÂ·¾¶¿ªÊ¼¼ÆËã£¬ÎŞ/¿ªÍ·Ôò´Óµ±Ç°classÎÄ¼şµÄÂ·¾¶ÏÂ¼ÆËã¡£
+		//ä»¥ä¸‹ä¸¤ç§å†™æ³•éƒ½å¯ä»¥  getResourceAsStreamåªèƒ½è·å¾—srcä¸‹é¢çš„æ–‡ä»¶ï¼Œ/å¼€å¤´åˆ™ä»srcè·¯å¾„å¼€å§‹è®¡ç®—ï¼Œæ— /å¼€å¤´åˆ™ä»å½“å‰classæ–‡ä»¶çš„è·¯å¾„ä¸‹è®¡ç®—ã€‚
 		InputStream in = FileManipulate.class.getResourceAsStream("/beforeML/everything.properties");
 //		InputStream in = FileManipulate.class.getResourceAsStream("everything.properties");
 		System.out.println(in);
 		Properties p = new Properties();
 		try {
-			//ÓÃÓÚ¶ÁÈ¡·ÇsrcÂ·¾¶ÏÂµÄÎÄ¼ş
+			//ç”¨äºè¯»å–ésrcè·¯å¾„ä¸‹çš„æ–‡ä»¶
 //			p.load(new FileInputStream(System.getProperty("user.dir")+"\\properties\\start.properties"));
 			p.load(in);
 		} catch (IOException e) {

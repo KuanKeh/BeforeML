@@ -4,7 +4,7 @@
 package beforeML;
 
 /**
- * @author guoqinyi
+ * @author gyge
  *
  */
 public class JustUseTimer {
