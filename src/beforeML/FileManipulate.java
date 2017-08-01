@@ -186,4 +186,11 @@ public class FileManipulate {
 		}
 		p.list(System.out);
 	}
+	
+	/**
+	 * move file
+	 */
+	public static void move() {
+		
+	}
 }
