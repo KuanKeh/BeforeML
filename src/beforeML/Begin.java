@@ -32,13 +32,13 @@ public class Begin {
 	}
 	
 	/**
-	 * ÏòÎÄ¼şÖĞĞ´ÈëÄÚÈİ
+	 * å‘æ–‡ä»¶ä¸­å†™å…¥å†…å®¹
 	 */
 	public static void writeFile(){
 		BufferedWriter bw = null;
 		try {
-			bw = new BufferedWriter(new FileWriter("D:\\testjavawrite.txt"));//Ô­ÎÄ¼şÄÚÈİ±»Çå¿Õ
-//			bw = new BufferedWriter(new FileWriter("D:\\testjavawrit1e.txt",true));//ĞÂÄÚÈİÔö¼ÓÔÚÔ­ÎÄ¼şºó
+			bw = new BufferedWriter(new FileWriter("D:\\testjavawrite.txt"));//åŸæ–‡ä»¶å†…å®¹è¢«æ¸…ç©º
+//			bw = new BufferedWriter(new FileWriter("D:\\testjavawrit1e.txt",true));//æ–°å†…å®¹å¢åŠ åœ¨åŸæ–‡ä»¶å
 			bw.write("22f");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -56,14 +56,14 @@ public class Begin {
 	}
 	
 	/**
-	 * listÓÃ·¨
+	 * listç”¨æ³•
 	 */
 	public static void listPlaying(){
 
 	}
 	
 	/**
-	 * »ñµÃµ±Ç°·½·¨µÄÃû³Æ
+	 * è·å¾—å½“å‰æ–¹æ³•çš„åç§°
 	 */
 	public static void getMethodName(){
 		String s = Thread.currentThread().getStackTrace()[1].getMethodName();
@@ -71,7 +71,7 @@ public class Begin {
 	}
 	
 	/**
-	 * Ê¹ÓÃjsonobject
+	 * ä½¿ç”¨jsonobject
 	 */
 	public static void jsonPlaying(){
 		JSONObject jb = new JSONObject();
@@ -81,7 +81,7 @@ public class Begin {
 	}
 	
 	/**
-	 * »ñµÃ´ÅÅÌÎÄ¼ş
+	 * è·å¾—ç£ç›˜æ–‡ä»¶ é€’å½’
 	 */
 	public static void distribute(){
 		File dir = new File("D:\\");
@@ -94,16 +94,16 @@ public class Begin {
 	}
 	
 	/**
-	 * ×Ö·û´®¡¢ÈÕÆÚ»¥Ïà×ª»»
+	 * å­—ç¬¦ä¸²ã€æ—¥æœŸäº’ç›¸è½¬æ¢
 	 */
 	public static void strToDate(){
 		try {
-			//×Ö·û´®-->ÈÕÆÚ
+			//å­—ç¬¦ä¸²-->æ—¥æœŸ
 			Date d = DateFormat.getDateInstance().parse("2016-08-19");
 			System.out.println(d);
 			Date d2 = new SimpleDateFormat("yyyy-MM-dd").parse("2016-06-09");
 			System.out.println(d2);
-			//ÈÕÆÚ-->×Ö·û´®
+			//æ—¥æœŸ-->å­—ç¬¦ä¸²
 			String s = new SimpleDateFormat("yyyy-MM-dd").format(d);
 			System.out.println(s);
 		} catch (ParseException e) {
@@ -113,17 +113,17 @@ public class Begin {
 	}
 	
 	/**
-	 * °Ñutil Date×ª»¯Îªsql Date
-	 * Á½Õß¿ÉÒÔ»¥Ïà×ª»¯£¬·½·¨ÏàÍ¬
+	 * æŠŠutil Dateè½¬åŒ–ä¸ºsql Date
+	 * ä¸¤è€…å¯ä»¥äº’ç›¸è½¬åŒ–ï¼Œæ–¹æ³•ç›¸åŒ
 	 */
 	public static void uToS(){
 		java.util.Date d = new java.util.Date();
 		java.sql.Date d2 = new java.sql.Date(d.getTime());
-		System.out.println(d2);//2017-07-26 ²»ĞèÒªformat
+		System.out.println(d2);//2017-07-26 ä¸éœ€è¦format
 	}
 	
 	/**
-	 * ÎÄ¼ş¿½±´
+	 * æ–‡ä»¶æ‹·è´
 	 */
 	public static void copy(){
 		
