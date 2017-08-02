@@ -169,7 +169,7 @@ public class FileManipulate {
 	}
 	
 	/**
-	 * 读取Property文件
+	 * 读取Property文件  两种方法 getResourceAsStream,FileInputStream
 	 */
 	public static void loadProperties(){
 		//以下两种写法都可以  getResourceAsStream只能获得src下面的文件，/开头则从src路径开始计算，无/开头则从当前class文件的路径下计算。
