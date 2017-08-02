@@ -55,13 +55,12 @@ public class FileManipulate {
 		FileInputStream in = null;
 		FileOutputStream out = null;
 		long begin = System.currentTimeMillis();
-		long temp = begin;
-		long temp2 = begin;
+		long temp = begin, temp2 = begin;
 		int i = 0;
 		try {
 			in = new FileInputStream(f1);
 			out = new FileOutputStream(f2);
-			byte[] by = new byte[2097152];
+			byte[] by = new byte[2097152];// 2M字节
 			while(true){
 				i++;
 				temp = temp2;
@@ -185,5 +184,12 @@ public class FileManipulate {
 			e.printStackTrace();
 		}
 		p.list(System.out);
+	}
+	
+	/**
+	 * move file
+	 */
+	public static void move() {
+		
 	}
 }
