@@ -3,6 +3,10 @@
  */
 package beforeML;
 
+import java.awt.Container;
+import java.awt.Image;
+import java.awt.MediaTracker;
+import java.awt.Toolkit;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -191,5 +195,15 @@ public class FileManipulate {
 	 */
 	public static void move() {
 		
+	}
+	
+	/**
+	 * 缩略图
+	 */
+	public static void thumbNail(){
+		String imageName = "";
+		Image image = Toolkit.getDefaultToolkit().getImage(imageName);
+		MediaTracker mt = new MediaTracker(new Container());
+		mt.addImage(image, 0);
 	}
 }
