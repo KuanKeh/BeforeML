@@ -21,7 +21,7 @@ public class BinarySearch {
 	 * 二分搜索
 	 */
 	public static int search( int[]a , int k ) {
-		int x = 0;//{1,3,5,6,7,9}
+		//{1,3,5,6,7,9}
 		int ret = -1;
 		int l = 0;
 		int r = a.length - 1;
