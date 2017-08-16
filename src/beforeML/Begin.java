@@ -11,6 +11,7 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Scanner;
 
 import org.json.JSONObject;
 
@@ -25,10 +26,81 @@ public class Begin {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-//		String s = new String();
-//		s = "ff";
-		uToS();
-
+//		Scanner in = new Scanner(System.in);
+//		System.out.println(s1.offsetByCodePoints(index, codePointOffset));
+//		String s1 = "abcdefghij";
+//		String s2 = "1234i";
+//		System.out.println(s1.substring(8).compareTo(s2.substring(4)));
+//		TestObject to = new TestObject();
+//		String s = "3";
+//		System.out.println(s+to);
+//		int[] iii = new int[]{1,2,3};
+//		int[] loc = new int[100];
+//		for( int i : loc){
+//			if(i!=0){
+//				System.out.println(i);
+//			}
+//		}
+		int[] a = new int[]{1,3,5,6,7,9};
+		int k = 3;
+//		System.out.println((-1+0)/2);// 0
+		System.out.println(search(a,k));
+//		UnicodeEncoding ue = new UnicodeEncoding();
+	}
+	
+	/**
+	 * 二分搜索
+	 */
+	public static int search( int[]a , int k ) {
+		int x = 0;//{1,3,5,6,7,9}
+		int ret = -1;
+		int l = 0;
+		int r = a.length - 1;
+		int m = (l+r)/2;
+		while(l!=r){
+//			System.out.println("x = " + x++);
+			m = (l+r)/2;
+			System.out.println("r = " + r);
+			if(a[m]>k){
+				r = m-1;
+			}else if(a[m]<k){
+				l = m+1;
+			}else{
+				ret = m;
+				break;
+			}
+//			System.out.println("r = " + r);
+		}
+//		if(a[l] == k){
+//			ret = l;
+//		}
+		return ret;
+	}
+	
+	/**
+	 * 选择排序
+	 */
+	public static void order(int[] a){
+		for( int i = 0; i < a.length -1; i++ ){
+			max(a,i);
+		}
+		System.out.println(a.toString());
+	}
+	
+	/**
+	 * 最大值
+	 */
+	public static void max(int[] a, int i){
+		int temp = a[0];
+		int idx = 0;
+		for(int j = 1; j < a.length - 1 - i; j++){
+			if(a[j] > temp){
+				idx = j;
+				temp = a[j];
+			}
+		}
+		a[idx] = a[a.length - 1 - i]; 
+		a[a.length - 1 - i] = temp;
 	}
 	
 	/**

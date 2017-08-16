@@ -29,7 +29,7 @@ public class FileManipulate {
 //		File dir = new File("D:\\video");
 //		distribute(dir);
 //		copy();
-		loadProperties();
+//		loadProperties();
 	}
 	
 	private static int x = 0;
@@ -77,6 +77,7 @@ public class FileManipulate {
 						out.close();
 						break;
 					}else{
+						System.out.println("res = "+res);
 						out.write(by);
 						temp2 = System.currentTimeMillis();
 						System.out.println("i = " + i + " &spend = " + (temp2-temp));
