@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package beforeML;
+
+/**
+ * @author Kuan
+ *
+ */
+public class ClockDisplay {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

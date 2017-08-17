@@ -6,7 +6,7 @@ package beforeML;
 import java.util.Scanner;
 
 /**
- * @author gyge
+ * @author Kuan
  *
  */
 public class TicketMachine {

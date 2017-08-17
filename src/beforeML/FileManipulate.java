@@ -16,7 +16,7 @@ import java.io.InputStream;
 import java.util.Properties;
 
 /**
- * @author gyge
+ * @author Kuan
  *
  */
 public class FileManipulate {

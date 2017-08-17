@@ -16,7 +16,7 @@ import java.util.Scanner;
 import org.json.JSONObject;
 
 /**
- * @author gyge
+ * @author Kuan
  *
  */
 public class Begin {
