@@ -10,20 +10,22 @@ package beforeML.cdAndDvd;
 public class Item {
 
 	private String title;
-	private int playingTime;
-	private boolean gotIt;
-	private String comment;
+//	private int playingTime;
+//	private boolean gotIt;
+//	private String comment = "";
 	
-	public Item(String theTitle, int time){
-		title = theTitle;
-		playingTime = time;
-		gotIt = false;
-		comment = "";
-	}
+//	public Item(String theTitle, int time){
+//		title = theTitle;
+//		playingTime = time;
+//		gotIt = false;
+//		comment = "";
+//	}
 	
 	public Item(String title){
 		this.title = title;
 	}
+//	public Item(){
+//	}
 	
 	/**
 	 * @param args
@@ -34,7 +36,7 @@ public class Item {
 	}
 
 	public void print() {
-		System.out.print("title is " + title + ", playingTime is " + playingTime);
+		System.out.println("title is " + title);
 	}
 
 }
