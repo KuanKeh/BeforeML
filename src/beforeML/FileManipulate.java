@@ -29,7 +29,7 @@ public class FileManipulate {
 //		File dir = new File("D:\\video");
 //		distribute(dir);
 //		copy();
-//		loadProperties();
+		loadProperties();
 	}
 	
 	private static int x = 0;
@@ -188,7 +188,8 @@ public class FileManipulate {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		p.list(System.out);
+//		p.list(System.out);
+		System.out.println(p.getProperty("tree"));
 	}
 	
 	/**

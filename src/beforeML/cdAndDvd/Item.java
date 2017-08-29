@@ -12,7 +12,7 @@ public class Item {
 	private String title;
 //	private int playingTime;
 //	private boolean gotIt;
-//	private String comment = "";
+	private String comment;
 	
 //	public Item(String theTitle, int time){
 //		title = theTitle;
@@ -24,8 +24,8 @@ public class Item {
 	public Item(String title){
 		this.title = title;
 	}
-//	public Item(){
-//	}
+	public Item(){
+	}
 	
 	/**
 	 * @param args
@@ -37,6 +37,7 @@ public class Item {
 
 	public void print() {
 		System.out.println("title is " + title);
+		System.out.println("comment" + comment);
 	}
 
 }

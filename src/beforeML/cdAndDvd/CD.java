@@ -5,15 +5,15 @@ public class CD extends Item {
 	private int numOfTracks = 0;
 	
 	public CD(String title, int not) {
-		super(title);
+//		super(title);
 		numOfTracks = not;
 	}
 	
 	
-	public void print(){
-		super.print();
-		System.out.println(numOfTracks);
-	}
+//	public void print(){
+//		super.print();
+//		System.out.println(numOfTracks);
+//	}
 	
 	public int getNot(){
 		return numOfTracks;

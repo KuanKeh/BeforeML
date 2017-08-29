@@ -32,16 +32,22 @@ public class ClockDisplay {
 		else
 			return ""+value;
 	}
+	
+	public static void f(){
+//		int i = this.value;
+	}
+	
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		ClockDisplay cd = new ClockDisplay(24);
-		while(true){
-			cd.tick();
-			System.out.println(cd.getValue());
-		}
+//		ClockDisplay cd = new ClockDisplay(24);
+//		while(true){
+//			cd.tick();
+//			System.out.println(cd.getValue());
+//		}
+		Cba c = new Cba();
 	}
 
 }
