@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -41,11 +42,22 @@ public class Begin {
 //				System.out.println(i);
 //			}
 //		}
-		int[] a = new int[]{1,3,5,6,7,9};
-		int k = 3;
+//		int[] a = new int[]{1,3,5,6,7,9};
+//		int k = 3;
 //		System.out.println((-1+0)/2);// 0
-		System.out.println(search(a,k));
+//		System.out.println(search(a,k));
 //		UnicodeEncoding ue = new UnicodeEncoding();
+//		muleHorseDunkey();
+		ArrayList<Integer> a = new ArrayList<Integer>();
+		a.add(1);
+		a.add(3);
+		a.add(2);
+//		Begin b = new Begin();
+//		b.cycleFor(a);
+//		b.cycleWhile(a);
+//		b.cycleDi(a, a.size()-1, 0);
+//		Begin[] c = new Begin[10];
+		System.out.println(a.contains(3));
 	}
 	
 	/**
@@ -199,5 +211,66 @@ public class Begin {
 	 */
 	public static void copy(){
 		
+	}
+	
+	/**
+	 * 骡马驴
+	 */
+	public static void muleHorseDunkey(){
+		int a = 0;
+		int b = 0;
+		for(int x = 0; x <= 100; x++){
+			a++;
+			for(int y = 0; 100-x-y>=0;y++){
+				b++;
+//				if(x == 80){
+//					System.out.println("x = " + x + " y = " + y + " b = " + b);
+//				}
+				System.out.println("a = " + a + " b = " + b);
+				if((100-x-y)%3==0){
+					int z = 3*x + 2*y + (100-x-y)/3;
+					if(z==100){
+						System.out.println("x = " + x + " y = " + y + " z = " + (100-x-y));
+					}
+				}
+			}
+		}
+		System.out.println("a = " + a + " b = " + b);
+	}
+	
+	/**
+	 * cycle
+	 */
+	public void cycleFor(ArrayList<Integer> a){
+		int sum = 0;
+		for(int i = 0; i<a.size();i++){
+			sum += a.get(i);
+		}
+		System.out.println(sum + " for end");
+	}
+	
+	/**
+	 * cycle
+	 */
+	public void cycleWhile(ArrayList<Integer> a){
+		int i = 0;
+		int max = a.size();
+		int sum = 0;
+		while(i < max){
+			sum += a.get(i++);
+		}
+		System.out.println(sum + " while end");
+	}
+	
+	/**
+	 * cycle
+	 */
+	public void cycleDi(ArrayList<Integer> a, int index, int sum){
+		if(index>=0){
+			sum+=a.get(index--);
+			cycleDi(a,index,sum);
+		}else{
+			System.out.println(sum + " Di end");
+		}
 	}
 }
