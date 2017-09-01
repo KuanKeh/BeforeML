@@ -6,6 +6,7 @@ public class CD extends Item {
 	
 	public CD(String title, int not) {
 //		super(title);
+//		super();
 		numOfTracks = not;
 	}
 	

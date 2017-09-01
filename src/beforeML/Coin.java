@@ -12,9 +12,9 @@ public class Coin {
 		coinnames.put(25, "quarter");
 		coinnames.put(50, "half-dolar");
 		coinnames.put(50, "五毛");
-		System.out.println(coinnames.keySet());
-		System.out.println(coinnames.keySet().size());
-		System.out.println(coinnames);
+		System.out.println(coinnames.keySet());//[50, 1, 25, 10]
+		System.out.println(coinnames.keySet().size());//4
+		System.out.println(coinnames);//{50=五毛, 1=penny, 25=quarter, 10=dime}
 	}
 	
 	public String getName(int amount){
@@ -28,10 +28,10 @@ public class Coin {
 		// TODO Auto-generated method stub
 //		Scanner in = new Scanner(System.in);
 //		int amount = in.nextInt();
-//		Coin coin = new Coin();
+		Coin coin = new Coin();
 //		System.out.println(coin.getName(amount));
-		String[] s = {"1","2","4","4","5"};
-		System.out.println(s);
+//		String[] s = {"1","2","4","4","5"};
+//		System.out.println(s);
 	}
 
 }

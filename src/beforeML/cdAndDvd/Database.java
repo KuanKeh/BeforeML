@@ -38,11 +38,11 @@ public class Database {
 //		db.add(new CD("Owl City",7));
 //		db.add(new DVD("大话西游","周星驰"));
 //		db.list();
-		Item it = cd;
+//		Item it = cd;
 //		it.print();
-		CD cdd = (CD) it;//报错  Exception in thread "main" java.lang.ClassCastException: beforeML.cdAndDvd.Item cannot be cast to beforeML.cdAndDvd.CD
-		cdd.print();
-		it.print();
+//		CD cdd = (CD) it;//报错  Exception in thread "main" java.lang.ClassCastException: beforeML.cdAndDvd.Item cannot be cast to beforeML.cdAndDvd.CD
+//		cdd.print();
+//		it.print();
 		
 //		System.out.println(cd.getNot());
 		
