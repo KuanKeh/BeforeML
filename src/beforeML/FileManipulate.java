@@ -4,13 +4,9 @@
 package beforeML;
 
 import java.awt.Container;
-import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.MediaTracker;
-import java.awt.RenderingHints;
 import java.awt.Toolkit;
-import java.awt.image.BufferedImage;
-import java.io.DataInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -20,7 +16,7 @@ import java.io.InputStream;
 import java.util.Properties;
 
 /**
- * @author gyge
+ * @author Kuan
  *
  */
 public class FileManipulate {
@@ -34,14 +30,6 @@ public class FileManipulate {
 //		distribute(dir);
 //		copy();
 //		loadProperties();
-//		printProperties();
-//		copy1();
-//		System.out.println(System.getProperty("user.dir"));
-//		int i = 200;
-//		char c = (char) i;
-//		System.out.println(c);
-//		System.out.println(File.separator);
-		readData();
 	}
 	
 	private static int x = 0;
@@ -89,6 +77,7 @@ public class FileManipulate {
 						out.close();
 						break;
 					}else{
+						System.out.println("res = "+res);
 						out.write(by);
 						temp2 = System.currentTimeMillis();
 						System.out.println("i = " + i + " &spend = " + (temp2-temp));
@@ -108,11 +97,9 @@ public class FileManipulate {
 	
 	/**
 	 * 文件拷贝
-	 * byte设为2097152时，复制4096B大小的文件占用了2M空间 
-	 * @throws IOException 
 	 */
 	public static void copy1(){
-		String fileName = "千手纲手合集233.rar";//"熊熊三贱客.We.Bare.Bears.S01E10.720p.HDTV.x264.双语字幕-深影字幕组.mkv";//文件名
+		String fileName = "熊熊三贱客.We.Bare.Bears.S01E10.720p.HDTV.x264.双语字幕-深影字幕组.mkv";//文件名
 		String sourceDir = "D:\\";//原路径  pwd
 		File sourceExist = new File(sourceDir);//原路径  cd
 		File[] sourceFiles = sourceExist.listFiles();//原路径文件列表  ls
@@ -129,7 +116,7 @@ public class FileManipulate {
 		if(!sExist){
 			System.out.println("源文件不存在，请检查文件名。");
 		}else{
-			String distanceDir = "D:\\234\\";//目的目录
+			String distanceDir = "D:\\123\\";//目的目录
 			File distanceExist = new File(distanceDir);//目的目录
 			File[] distanceFiles = distanceExist.listFiles();//目的目录文件列表
 			boolean dExist = false;
@@ -151,13 +138,8 @@ public class FileManipulate {
 					long temp = begin;
 					long temp2 = begin;
 					in = new FileInputStream(f1);
-					try {
-						System.out.println("ava = " + in.available() + " &marksupport = " + in.markSupported());
-					}catch(IOException e) {
-						e.printStackTrace();
-					}
 					out = new FileOutputStream(f2);
-					byte[] by = new byte[4096];//new byte[2097152];//可能类似4K对齐,by不能设置太大
+					byte[] by = new byte[2097152];
 					int i = 0;
 					while(true){
 						i++;
@@ -173,7 +155,7 @@ public class FileManipulate {
 							}else{
 								out.write(by);
 								temp2 = System.currentTimeMillis();
-								System.out.println("res = " + res + " &i = " + i + " &spend = " + (temp2-temp));
+								System.out.println("i = " + i + " &spend = " + (temp2-temp));
 							}
 						} catch (IOException e) {
 							// TODO Auto-generated catch block
@@ -206,7 +188,8 @@ public class FileManipulate {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		p.list(System.out);
+//		p.list(System.out);
+		System.out.println(p.getProperty("tree"));
 	}
 	
 	/**
@@ -218,59 +201,11 @@ public class FileManipulate {
 	
 	/**
 	 * 缩略图
-	 * @throws InterruptedException 
 	 */
-	public static void thumbNail() throws InterruptedException{
+	public static void thumbNail(){
 		String imageName = "";
 		Image image = Toolkit.getDefaultToolkit().getImage(imageName);
 		MediaTracker mt = new MediaTracker(new Container());
 		mt.addImage(image, 0);
-		mt.waitForID(0);
-		System.out.println(mt.isErrorAny());
-		int height = 200,width = 100;
-		double ratio = (double)height/width;
-		int imageHeight = image.getHeight(null);
-		int imageWidth = image.getWidth(null);
-		double imageRatio = (double)imageHeight/imageWidth;
-		if(ratio > imageRatio) {
-			height = (int)(width * imageRatio);
-		}else {
-			width = (int)(height / imageRatio);
-		}
-		BufferedImage bi = new BufferedImage(width,height,BufferedImage.TYPE_INT_BGR);
-		Graphics2D g2d = bi.createGraphics();
-		g2d.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
-		g2d.drawImage(image,0,0,width,height,null);
-	}
-	
-	/**
-	 * system.getproperties
-	 */
-	public static void printProperties() {
-		Properties p = System.getProperties();
-//		System.out.println(System.getProperties());
-		p.list(System.out);
-	}
-	
-	/**
-	 * InputStream
-	 */
-	public static void readData() {
-		FileInputStream fins = null;
-		try {
-			fins = new FileInputStream("D:\\test.txt");
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		DataInputStream dins = new DataInputStream(fins);
-		double d = 0.0;
-		try {
-			d = dins.readDouble();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		System.out.println(d);
 	}
 }
