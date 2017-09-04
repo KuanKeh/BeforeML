@@ -3,6 +3,10 @@
  */
 package beforeML;
 
+import java.awt.Container;
+import java.awt.Image;
+import java.awt.MediaTracker;
+import java.awt.Toolkit;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -12,7 +16,7 @@ import java.io.InputStream;
 import java.util.Properties;
 
 /**
- * @author gyge
+ * @author Kuan
  *
  */
 public class FileManipulate {
@@ -25,7 +29,7 @@ public class FileManipulate {
 //		File dir = new File("D:\\video");
 //		distribute(dir);
 //		copy();
-		loadProperties();
+//		loadProperties();
 	}
 	
 	private static int x = 0;
@@ -73,6 +77,7 @@ public class FileManipulate {
 						out.close();
 						break;
 					}else{
+						System.out.println("res = "+res);
 						out.write(by);
 						temp2 = System.currentTimeMillis();
 						System.out.println("i = " + i + " &spend = " + (temp2-temp));
@@ -168,7 +173,7 @@ public class FileManipulate {
 	}
 	
 	/**
-	 * 读取Property文件
+	 * 读取Property文件  两种方法 getResourceAsStream,FileInputStream
 	 */
 	public static void loadProperties(){
 		//以下两种写法都可以  getResourceAsStream只能获得src下面的文件，/开头则从src路径开始计算，无/开头则从当前class文件的路径下计算。
@@ -183,7 +188,8 @@ public class FileManipulate {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		p.list(System.out);
+//		p.list(System.out);
+		System.out.println(p.getProperty("tree"));
 	}
 	
 	/**
@@ -191,5 +197,15 @@ public class FileManipulate {
 	 */
 	public static void move() {
 		
+	}
+	
+	/**
+	 * 缩略图
+	 */
+	public static void thumbNail(){
+		String imageName = "";
+		Image image = Toolkit.getDefaultToolkit().getImage(imageName);
+		MediaTracker mt = new MediaTracker(new Container());
+		mt.addImage(image, 0);
 	}
 }
