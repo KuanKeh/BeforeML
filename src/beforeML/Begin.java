@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Date;
 
 import org.json.JSONObject;
@@ -27,8 +28,8 @@ public class Begin {
 		// TODO Auto-generated method stub
 //		String s = new String();
 //		s = "ff";
-		uToS();
-
+//		uToS();
+		arrayTest();
 	}
 	
 	/**
@@ -126,6 +127,21 @@ public class Begin {
 	 * 文件拷贝
 	 */
 	public static void copy(){
+		
+	}
+	
+	/**
+	 * int[] a  int[] b = a
+	 */
+	public static void arrayTest(){
+		int[] a = {1,2,3,4,5};
+		a[0] = 10;
+		int[] b = {1,2,3,4,5};//a;
+		b[0] = 130;
+		String s = "ewq";
+//		System.out.println(s.toString());
+		RandomClass r = new RandomClass();
+		System.out.println(r.toString());
 		
 	}
 }
