@@ -100,6 +100,17 @@ public class Begin {
 	}
 	
 	/**
+	 * 选择排序
+	 */
+	public static String order(int[] a,int b){
+		for( int i = 0; i < a.length -1; i++ ){
+			max(a,i);
+		}
+		System.out.println(a.toString());
+		return null;
+	}
+	
+	/**
 	 * 最大值
 	 */
 	public static void max(int[] a, int i){
