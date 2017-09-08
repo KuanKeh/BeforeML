@@ -8,19 +8,19 @@ import java.util.UUID;
 public class Flash {
 
 	public static void main(String[] args) {
-//		tranCode();
+		tranCode();
 //		uuidTest();
-		try {
+//		try {
 //			toUTF("中文","UTF-8");
 //			toUTF("中文","GBK");
 //			toUTF("中文","GB2312");
 //			toUTF("中文","GB18030");
 //			toUTF("中文","ISO8859-1");
 //			toUTF("中文","");
-			trans();
-		} catch (UnsupportedEncodingException e) {
-			e.printStackTrace();
-		}
+//			trans();
+//		} catch (UnsupportedEncodingException e) {
+//			e.printStackTrace();
+//		}
 	}
 
 	/**
