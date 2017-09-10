@@ -48,16 +48,17 @@ public class Begin {
 //		System.out.println(search(a,k));
 //		UnicodeEncoding ue = new UnicodeEncoding();
 //		muleHorseDunkey();
-		ArrayList<Integer> a = new ArrayList<Integer>();
-		a.add(1);
-		a.add(3);
-		a.add(2);
+//		ArrayList<Integer> a = new ArrayList<Integer>();
+//		a.add(1);
+//		a.add(3);
+//		a.add(2);
 //		Begin b = new Begin();
 //		b.cycleFor(a);
 //		b.cycleWhile(a);
 //		b.cycleDi(a, a.size()-1, 0);
 //		Begin[] c = new Begin[10];
-		System.out.println(a.contains(3));
+//		System.out.println(a.contains(3));
+		data();
 	}
 	
 	/**
@@ -272,5 +273,28 @@ public class Begin {
 		}else{
 			System.out.println(sum + " Di end");
 		}
+	}
+	
+	/**
+	 * 数据类型
+	 */
+	public static void data() {
+//		char w = 13;
+//		int x = 20;
+//		long a = 1000;
+//		float y = 6.5f;
+//		double z = 70.3;
+//		System.out.println((w*x*a).getType().getName());
+		int i = 1,j = 2;
+		float x = 4.1f,y = 6.5f;
+		double u = 100.3, v = 1000.8;
+//		i = x;
+//		x=u+y;
+//		x=23.4+j*y;
+		v = (int)x;
+		u = x;
+//		x = u;
+		System.out.println(v);
+		
 	}
 }
