@@ -1,14 +1,19 @@
 package jumble;
 
+import java.io.File;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.TreeSet;
 import java.util.UUID;
 
 public class Flash {
 
 	public static void main(String[] args) {
-		tranCode();
+//		tranCode();
 //		uuidTest();
 //		try {
 //			toUTF("中文","UTF-8");
@@ -21,6 +26,30 @@ public class Flash {
 //		} catch (UnsupportedEncodingException e) {
 //			e.printStackTrace();
 //		}
+//		assign();
+//		System.out.println(File.separator);//\
+//		Person p = new Person("",11,Gender.MALE);
+//		Person pp = p;
+//		System.out.println(p);//[, 11, MALE]
+//		ArrayList<Person> aa = new ArrayList<Person>();
+//		aa.add(p);
+//		pp.setAge(12);
+//		System.out.println(aa.get(0));//[, 12, MALE]
+		Set<String> s = new HashSet<String>();
+		s.add("f");
+		s.add("c");
+		for(String aa:s){
+			System.out.println(aa);
+		}
+		
+		Set<Integer> tree = new TreeSet<Integer>();
+		tree.add(3);
+		tree.add(2);
+		tree.add(4);
+		for(int i : tree){
+			System.out.println(i);
+		}
+		
 	}
 
 	/**
@@ -28,7 +57,7 @@ public class Flash {
 	 * 原文件名：海贼王1~3卷（1~18话）
 	 */
 	public static void tranCode(){
-		String a = "%B0%A1%B0%A1%B0%A1";//"%E6%B5%B7%E8%B4%BC%E7%8E%8B1~3%E5%8D%B7%EF%BC%881~18%E8%AF%9D%EF%BC%89";
+		String a = "%E6%B5%B7%E8%B4%BC%E7%8E%8B1~3%E5%8D%B7%EF%BC%881~18%E8%AF%9D%EF%BC%89";//"%E6%B5%B7%E8%B4%BC%E7%8E%8B1~3%E5%8D%B7%EF%BC%881~18%E8%AF%9D%EF%BC%89";
 		byte[] x = a.getBytes();
 		String b = "";
 		String c = "";
@@ -103,5 +132,18 @@ public class Flash {
 		s = URLDecoder.decode(s,"ISO-8859-1");
 		System.out.println(s);
 		System.out.println(URLDecoder.decode(s,"UTF-8"));
+	}
+	
+	/**
+	 * 
+	 */
+	public static void assign(){
+		Cell cell = new Cell();
+		Cell cell1 = new Cell();
+		Cell c1 = cell;
+		Cell c2 = c1;
+		System.out.println("Before ass");
+		c1 = cell1;
+		System.out.println("After ass");
 	}
 }
