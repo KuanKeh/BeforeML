@@ -22,14 +22,11 @@ public class FoxAndRabbit {
 	private JFrame frame;
 	
 //	private class StepListener implements ActionListener{
-//
 //		@Override
 //		public void actionPerformed(ActionEvent e) {
-//			// TODO Auto-generated method stub
 //			step();
 //			frame.repaint();
 //		}
-//		
 //	}
 	
 	public FoxAndRabbit(int size) {

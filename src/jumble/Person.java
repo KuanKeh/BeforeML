@@ -2,7 +2,7 @@ package jumble;
 
 import java.io.Serializable;
 
-public class Person implements Serializable {
+public class Person implements Serializable,Comparable {
 	private String name = null;  
 	 
     private Integer age = null;  
@@ -31,5 +31,11 @@ public class Person implements Serializable {
     @Override 
     public String toString() {
         return "[" + name + ", " + age + ", " + gender + "]";  
-    }  
+    }
+
+	@Override
+	public int compareTo(Object o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}  
 }
