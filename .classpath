@@ -3,5 +3,7 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="D:/jars/json-rpc-1.0.jar"/>
+	<classpathentry kind="lib" path="D:/jars/algs4.jar"/>
+	<classpathentry kind="lib" path="D:/jars/mysql-connector-java-5.1.44-bin.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
