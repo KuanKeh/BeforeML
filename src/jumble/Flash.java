@@ -9,7 +9,6 @@ import java.util.Set;
 import java.util.TreeSet;
 import java.util.UUID;
 import java.util.Scanner;
-import java.util.UUID;
 
 public class Flash {
 
@@ -27,6 +26,32 @@ public class Flash {
 //		} catch (UnsupportedEncodingException e) {
 //			e.printStackTrace();
 //		}
+//		assign();
+//		System.out.println(File.separator);//\
+//		Person p = new Person("",11,Gender.MALE);
+//		Person pp = p;
+//		System.out.println(p);//[, 11, MALE]
+//		ArrayList<Person> aa = new ArrayList<Person>();
+//		aa.add(p);
+//		pp.setAge(12);
+//		System.out.println(aa.get(0));//[, 12, MALE]
+//		Set<String> s = new HashSet<String>();
+//		s.add("f");
+//		s.add("c");
+//		for(String aa:s){
+//			System.out.println(aa);
+//		}
+//		
+//		Set<Integer> tree = new TreeSet<Integer>();
+//		tree.add(3);
+//		tree.add(2);
+//		tree.add(4);
+//		for(int i : tree){
+//			System.out.println(i);
+//		}
+		
+		
+		
 		
 //		Scanner in = new Scanner(System.in);
 		System.out.println("ar0 = " + args[0]);
