@@ -3,12 +3,13 @@ package jumble;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
+import java.util.Scanner;
 import java.util.UUID;
 
 public class Flash {
 
 	public static void main(String[] args) {
-		tranCode();
+//		tranCode();
 //		uuidTest();
 //		try {
 //			toUTF("中文","UTF-8");
@@ -21,10 +22,14 @@ public class Flash {
 //		} catch (UnsupportedEncodingException e) {
 //			e.printStackTrace();
 //		}
+		
+//		Scanner in = new Scanner(System.in);
+		System.out.println("ar0 = " + args[0]);
+		System.out.println("ar1 = " + args[1]);
 	}
 
 	/**
-	 * 下载的附件名乱码，进行解码
+	 * 下载的附件名乱码,进行解码
 	 * 原文件名：海贼王1~3卷（1~18话）
 	 */
 	public static void tranCode(){
@@ -91,8 +96,8 @@ public class Flash {
 	
 	/**
 	 * 中文转UTF-8 ISO-8859-1
-	 * ISO-8859-1是单字节编码，无法显示中文，所以用它编码以后不能再用它解码，否则显示??
-	 * request.getParameter();方法的时候使用服务器指定的编码格式自动解码一次 ?????
+	 * ISO-8859-1是单字节编码,无法显示中文,所以用它编码以后不能再用它解码,否则显示
+	 * request.getParameter();方法的时候使用服务器指定的编码格式自动解码一次 
 	 * @throws UnsupportedEncodingException 
 	 */
 	public static void trans() throws UnsupportedEncodingException{
