@@ -9,7 +9,7 @@ package beforeML.cdAndDvd;
  */
 public class Item {
 
-	protected String title = "";
+	private String title = "tt";
 //	private int playingTime;
 //	private boolean gotIt;
 	private String comment = "";
@@ -37,14 +37,32 @@ public class Item {
 	 */
 	public static void main(String[] args) {
 		// TODO 3321
-		Item i = new DVD("1","2");
-		System.out.println(i.title);
+//		Item i = new DVD("1","2");
+//		Item i = new DVD();
+//		i.print();
+//		System.out.println(i.title);
+//		DVD dvd = new DVD();
+//		dvd.print();
+//		System.out.println(dvd.title);
+//		i.print();
+//		int i = (int)10.2;
+//		int j = (int)10.7;
+//		System.out.println(i);
+//		System.out.println(j);
+//		int i ;
+//		System.out.println(i);
 
 	}
 
 	public void print() {
-		System.out.println("title is " + title);
-		System.out.println("comment" + comment);
+//		System.out.println("title is " + title);
+//		System.out.println("comment" + comment);
+		System.out.println("print from item");
+		this.print_task();
+	}
+	
+	protected void print_task() {
+		System.out.println("print_task from item");
 	}
 
 }
