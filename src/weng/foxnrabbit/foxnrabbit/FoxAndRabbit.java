@@ -49,7 +49,7 @@ public class FoxAndRabbit {
 		frame.setTitle("Cells");
 		frame.add(theView);
 		JButton btnStep = new JButton("单步");
-		frame.add(btnStep,BorderLayout.NORTH);
+		frame.add(btnStep,"North");//BorderLayout.NORTH);
 //		btnStep.addActionListener(new StepListener());
 		btnStep.addActionListener(new ActionListener() {
 			@Override
