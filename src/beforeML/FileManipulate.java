@@ -29,7 +29,7 @@ public class FileManipulate {
 //		File dir = new File("D:\\video");
 //		distribute(dir);
 //		copy();
-//		loadProperties();
+		loadProperties();
 	}
 	
 	private static int x = 0;
@@ -181,15 +181,43 @@ public class FileManipulate {
 //		InputStream in = FileManipulate.class.getResourceAsStream("everything.properties");
 		System.out.println(in);
 		Properties p = new Properties();
+		Properties pp = new Properties();
 		try {
-			//用于读取非src路径下的文件
-//			p.load(new FileInputStream(System.getProperty("user.dir")+"\\properties\\start.properties"));
 			p.load(in);
+			//用于读取非src路径下的文件
+			pp.load(new FileInputStream(System.getProperty("user.dir")+"\\properties\\start.properties"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+//		p.list(System.out);
+		System.out.println(System.getProperty("user.dir"));//D:\documents\git\BeforeML
+		System.out.println(p.getProperty("tree"));
+		System.out.println(pp.getProperty("tree"));
+	}
+	
+	/**
+	 * 读取Property文件  getResource("")中是否加"/"的区别
+	 * Tomcat中 this.getClass().getResource("").getPath() 和this.getClass().getResource("/").getPath()结果相同
+	 * Websphere中  this.getClass().getResource("").getPath() 定位到该java对应class所在目录(WEB-INF/classes/......./)
+	 * 但是 this.getClass().getResource("/").getPath() 定位到/home/app/IBM/webSphere/AppServer/profiles/ccapp2/properties/
+	 */
+	public static void loadPropertiesForServer(){
+		//以下两种写法都可以  getResourceAsStream只能获得src下面的文件，/开头则从src路径开始计算，无/开头则从当前class文件的路径下计算。
+		InputStream in = FileManipulate.class.getResourceAsStream("/beforeML/everything.properties");
+//		InputStream in = FileManipulate.class.getResourceAsStream("everything.properties");
+		System.out.println(in);
+		Properties p = new Properties();
+		Properties pp = new Properties();
+		try {
+			p.load(in);
+			//用于读取非src路径下的文件
+			pp.load(new FileInputStream(System.getProperty("user.dir")+"\\properties\\start.properties"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 //		p.list(System.out);
 		System.out.println(p.getProperty("tree"));
+		System.out.println();
 	}
 	
 	/**

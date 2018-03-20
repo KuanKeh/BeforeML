@@ -1,5 +1,6 @@
 package jumble;
 
+import java.io.File;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
@@ -8,12 +9,11 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.UUID;
-import java.util.Scanner;
 
 public class Flash {
 
 	public static void main(String[] args) {
-//		tranCode();
+		tranCode();
 //		uuidTest();
 //		try {
 //			toUTF("中文","UTF-8");
@@ -50,20 +50,16 @@ public class Flash {
 //			System.out.println(i);
 //		}
 		
-		
-		
-		
-//		Scanner in = new Scanner(System.in);
-		System.out.println("ar0 = " + args[0]);
-		System.out.println("ar1 = " + args[1]);
 	}
 
 	/**
-	 * 下载的附件名乱码,进行解码
+	 * 下载的附件名乱码，进行解码
 	 * 原文件名：海贼王1~3卷（1~18话）
 	 */
 	public static void tranCode(){
-		String a = "%B0%A1%B0%A1%B0%A1";//"%E6%B5%B7%E8%B4%BC%E7%8E%8B1~3%E5%8D%B7%EF%BC%881~18%E8%AF%9D%EF%BC%89";
+		String a = "%E6%B5%B7%E8%B4%BC%E7%8E%8B1~3%E5%8D%B7%EF%BC%881~18%E8%AF%9D%EF%BC%89";//"%E6%B5%B7%E8%B4%BC%E7%8E%8B1~3%E5%8D%B7%EF%BC%881~18%E8%AF%9D%EF%BC%89";
+//		a = "<!-- è?????é??é?¨???è??,???é??è????????é??JQUERY -->";
+//		a = "<!-- è?????é??é?¨???è??,???é??è????????é??JQUERY -->";
 		byte[] x = a.getBytes();
 		String b = "";
 		String c = "";
@@ -86,7 +82,7 @@ public class Flash {
 			 h = URLDecoder.decode(a,"GB2312");
 			 i = URLDecoder.decode(a,"GB18030");
 			 j = URLDecoder.decode(a,"GBK");
-			 k = URLDecoder.decode(a,"UTF-8");
+			 k = URLDecoder.decode(a,"UTF-8");//海贼王1~3卷（1~18话）
 			 l = URLDecoder.decode(a,"ISO8859-1");
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
@@ -126,8 +122,8 @@ public class Flash {
 	
 	/**
 	 * 中文转UTF-8 ISO-8859-1
-	 * ISO-8859-1是单字节编码,无法显示中文,所以用它编码以后不能再用它解码,否则显示
-	 * request.getParameter();方法的时候使用服务器指定的编码格式自动解码一次 
+	 * ISO-8859-1是单字节编码，无法显示中文，所以用它编码以后不能再用它解码，否则显示??
+	 * request.getParameter();方法的时候使用服务器指定的编码格式自动解码一次 ?????
 	 * @throws UnsupportedEncodingException 
 	 */
 	public static void trans() throws UnsupportedEncodingException{
@@ -138,5 +134,18 @@ public class Flash {
 		s = URLDecoder.decode(s,"ISO-8859-1");
 		System.out.println(s);
 		System.out.println(URLDecoder.decode(s,"UTF-8"));
+	}
+	
+	/**
+	 * 
+	 */
+	public static void assign(){
+		Cell cell = new Cell();
+		Cell cell1 = new Cell();
+		Cell c1 = cell;
+		Cell c2 = c1;
+		System.out.println("Before ass");
+		c1 = cell1;
+		System.out.println("After ass");
 	}
 }

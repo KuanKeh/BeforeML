@@ -31,8 +31,10 @@ public class LengthOfWords {
 //		System.out.println(s.lastIndexOf('4'));
 //		System.out.println(s.startsWith("3",1));
 
-		System.out.println(Math.round(10.425));
-		System.out.println();
+//		System.out.println(Math.round(10.525));
+//		System.out.println();
+		
+		
 		
 	}
 
