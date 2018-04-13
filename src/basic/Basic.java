@@ -55,13 +55,17 @@ public class Basic {
 		System.out.println(p.getName());
 		
 //		String s = "";
-		String s = new String();
-		long start = System.currentTimeMillis();
-		for(int i = 0; i < 100000; i++){
-			s = s + i;
-		}
-		long end = System.currentTimeMillis();
-		System.out.println("time="+ (end-start));
+//		String s = new String();
+//		long start = System.currentTimeMillis();
+//		for(int i = 0; i < 100000; i++){
+//			s = s + i;
+//		}
+//		long end = System.currentTimeMillis();
+//		System.out.println("time="+ (end-start));
+		
+		System.out.println(true||false&&false);
+		int i =0;
+		System.out.println(i+=1);
 	}
 
 }
