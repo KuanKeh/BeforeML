@@ -55,13 +55,35 @@ public class Basic {
 		System.out.println(p.getName());
 		
 //		String s = "";
-		String s = new String();
-		long start = System.currentTimeMillis();
-		for(int i = 0; i < 100000; i++){
-			s = s + i;
+//		String s = new String();
+//		long start = System.currentTimeMillis();
+//		for(int i = 0; i < 100000; i++){
+//			s = s + i;
+//		}
+//		long end = System.currentTimeMillis();
+//		System.out.println("time="+ (end-start));
+		
+		int x=91, y=100;
+		int count = 0;
+		while(y>0) {
+			count++;
+			if(x>100) {
+				x=x-10;
+				y--;
+				System.out.println(count);
+			}else 
+				x++;
 		}
-		long end = System.currentTimeMillis();
-		System.out.println("time="+ (end-start));
+		System.out.println(count);
+		
+//		System.out.println(less(1,2));
+		String kn[] = new String[3];
+		System.out.println();
+	}
+	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	public static int less(Comparable v,Comparable w) {
+		return v.compareTo(w);
 	}
 
 }

@@ -5,7 +5,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.Scanner;
 
 class Parent{
-	private String name;
+	public String name;
 	public Parent() {
 		
 	}
@@ -15,13 +15,16 @@ class Parent{
 	int change() {
 		return 0;
 	}
+	public String getName() {
+		return "";
+	}
 }
 
 public class Child extends Parent{
 	private String department;
 	String _abc = "";
 
-	private Child() {//出错
+	public Child() {//出错
 		
 	}
 	public String getValue() {
