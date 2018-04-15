@@ -5,9 +5,17 @@ import java.io.UnsupportedEncodingException;
 import java.util.Scanner;
 
 class Parent{
+<<<<<<< HEAD
 	public String name;
+=======
+	public String name = "parent";
+>>>>>>> branch 'master' of https://github.com/KuanKeh/BeforeML
 	public Parent() {
 		
+	}
+	public String getName() {
+		System.out.println("parent getname");
+		return name;
 	}
 	public long add() {
 		return 0;
@@ -23,6 +31,7 @@ class Parent{
 public class Child extends Parent{
 	private String department;
 	String _abc = "";
+	public String name = "child";
 
 	public Child() {//出错
 		
@@ -30,6 +39,10 @@ public class Child extends Parent{
 	public String getValue() {
 		return department;
 	}
+//	public String getName() {
+//		System.out.println("child getname");
+//		return name;
+//	}
 	public long add() {
 		return 0;
 	}
