@@ -62,34 +62,9 @@ public class Basic {
 //		}
 //		long end = System.currentTimeMillis();
 //		System.out.println("time="+ (end-start));
-		
-<<<<<<< HEAD
-		int x=91, y=100;
-		int count = 0;
-		while(y>0) {
-			count++;
-			if(x>100) {
-				x=x-10;
-				y--;
-				System.out.println(count);
-			}else 
-				x++;
-		}
-		System.out.println(count);
-		
-//		System.out.println(less(1,2));
-		String kn[] = new String[3];
-		System.out.println();
-	}
-	
-	@SuppressWarnings({ "rawtypes", "unchecked" })
-	public static int less(Comparable v,Comparable w) {
-		return v.compareTo(w);
-=======
 		System.out.println(true||false&&false);
 		int i =0;
 		System.out.println(i+=1);
->>>>>>> branch 'master' of https://github.com/KuanKeh/BeforeML
 	}
 
 }

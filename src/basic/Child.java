@@ -5,11 +5,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.Scanner;
 
 class Parent{
-<<<<<<< HEAD
-	public String name;
-=======
 	public String name = "parent";
->>>>>>> branch 'master' of https://github.com/KuanKeh/BeforeML
 	public Parent() {
 		
 	}
@@ -22,9 +18,6 @@ class Parent{
 	}
 	int change() {
 		return 0;
-	}
-	public String getName() {
-		return "";
 	}
 }
 
