@@ -28,8 +28,8 @@ public class FileManipulate {
 		// TODO Auto-generated method stub
 //		File dir = new File("D:\\video");
 //		distribute(dir);
-//		copy();
-		loadProperties();
+		copy();
+//		loadProperties();
 	}
 	
 	private static int x = 0;
@@ -54,8 +54,11 @@ public class FileManipulate {
 	 * 文件拷贝
 	 */
 	public static void copy(){
-		File f1 = new File("D:\\熊熊三贱客.We.Bare.Bears.S01E10.720p.HDTV.x264.双语字幕-深影字幕组.mkv");
-		File f2 = new File("D:\\123\\熊熊三贱客.We.Bare.Bears.S01E10.720p.HDTV.x264.双语字幕-深影字幕组.mkv");
+//		File f1 = new File("D:\\熊熊三贱客.We.Bare.Bears.S01E10.720p.HDTV.x264.双语字幕-深影字幕组.mkv");
+//		File f2 = new File("D:\\123\\熊熊三贱客.We.Bare.Bears.S01E10.720p.HDTV.x264.双语字幕-深影字幕组.mkv");
+		File f1 = new File("D:\\algo-data.txt");
+		File f2 = new File("D:\\123\\algo-data.txt");
+//		byte b = new byte();
 		FileInputStream in = null;
 		FileOutputStream out = null;
 		long begin = System.currentTimeMillis();

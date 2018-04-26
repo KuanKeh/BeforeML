@@ -1,5 +1,9 @@
 package basic;
 
+import java.util.LinkedList;
+
+import sun.misc.BASE64Encoder;
+
 public class Test {
 
 	public Test() {
@@ -26,6 +30,12 @@ public class Test {
 		System.out.println(Test.rever(-121));
 		StringBuilder sb = new StringBuilder("-1");
 		System.out.println(sb.reverse());
+		String a = "试图转成base64";
+		BASE64Encoder ba = new BASE64Encoder();
+		System.out.println(ba.encode(a.getBytes()));
+		LinkedList<String> l = new LinkedList<String>();
+		l.add("abc");
+		l.add("ef");
 	}
 
 }
