@@ -175,6 +175,55 @@ public class FileManipulate {
 		}
 	}
 	
+		/**
+	 * 文件拷贝  使用buffer
+	 */
+	public static void copy2(){
+		File f1 = new File("D:\\Data144.zip");
+		File f2 = new File("D:\\123\\Data144.zip");
+		FileInputStream in = null;
+		FileOutputStream out = null;
+		BufferedInputStream bis = null;
+		BufferedOutputStream bos = null;
+		long begin = System.currentTimeMillis();
+		long temp = begin, temp2 = begin;
+		int i = 0;
+		try {
+			in = new FileInputStream(f1);
+			out = new FileOutputStream(f2);
+			bis = new BufferedInputStream(in);
+			bos = new BufferedOutputStream(out);
+			byte[] by = new byte[4096];// 4K 2M字节
+			while(true){
+				i++;
+				temp = temp2;
+				int res = 0;
+				try {
+					res = bis.read(by);
+					if(res == -1){
+						bis.close();
+						bos.flush();
+						bos.close();
+						break;
+					}else{
+						System.out.println("res = "+res);
+						bos.write(by,0,res);
+						temp2 = System.currentTimeMillis();
+						System.out.println("i = " + i + " &spend = " + (temp2-temp));
+					}
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			long end = System.currentTimeMillis();
+			System.out.println("end-begin = " + (end-begin));
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
 	/**
 	 * 读取Property文件  两种方法 getResourceAsStream,FileInputStream
 	 */
