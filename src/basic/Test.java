@@ -23,9 +23,12 @@ public class Test {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(Test.rever(-121));
-		StringBuilder sb = new StringBuilder("-1");
-		System.out.println(sb.reverse());
+//		System.out.println(Test.rever(-121));
+//		StringBuilder sb = new StringBuilder("-1");
+//		System.out.println(sb.reverse());
+		String test = "吃饭????喝酒";
+		test = test.replace("????", "\r\n");
+		System.out.println(test);
 	}
 
 }
