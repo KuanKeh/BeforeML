@@ -7,6 +7,8 @@ import java.awt.Container;
 import java.awt.Image;
 import java.awt.MediaTracker;
 import java.awt.Toolkit;
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -28,8 +30,8 @@ public class FileManipulate {
 		// TODO Auto-generated method stub
 //		File dir = new File("D:\\video");
 //		distribute(dir);
-//		copy();
-		loadProperties();
+		copy2();
+//		loadProperties();
 	}
 	
 	private static int x = 0;
@@ -54,8 +56,11 @@ public class FileManipulate {
 	 * 文件拷贝
 	 */
 	public static void copy(){
-		File f1 = new File("D:\\熊熊三贱客.We.Bare.Bears.S01E10.720p.HDTV.x264.双语字幕-深影字幕组.mkv");
-		File f2 = new File("D:\\123\\熊熊三贱客.We.Bare.Bears.S01E10.720p.HDTV.x264.双语字幕-深影字幕组.mkv");
+//		File f1 = new File("D:\\熊熊三贱客.We.Bare.Bears.S01E10.720p.HDTV.x264.双语字幕-深影字幕组.mkv");
+//		File f2 = new File("D:\\123\\熊熊三贱客.We.Bare.Bears.S01E10.720p.HDTV.x264.双语字幕-深影字幕组.mkv");
+		File f1 = new File("D:\\algo-data.txt");
+		File f2 = new File("D:\\123\\algo-data.txt");
+//		byte b = new byte();
 		FileInputStream in = null;
 		FileOutputStream out = null;
 		long begin = System.currentTimeMillis();
@@ -64,7 +69,7 @@ public class FileManipulate {
 		try {
 			in = new FileInputStream(f1);
 			out = new FileOutputStream(f2);
-			byte[] by = new byte[2097152];// 2M字节
+			byte[] by = new byte[4096];// 4K 2M字节
 			while(true){
 				i++;
 				temp = temp2;
@@ -78,7 +83,7 @@ public class FileManipulate {
 						break;
 					}else{
 						System.out.println("res = "+res);
-						out.write(by);
+						out.write(by,0,res);
 						temp2 = System.currentTimeMillis();
 						System.out.println("i = " + i + " &spend = " + (temp2-temp));
 					}
@@ -169,6 +174,55 @@ public class FileManipulate {
 					e.printStackTrace();
 				}
 			}
+		}
+	}
+	
+	/**
+	 * 文件拷贝  使用buffer
+	 */
+	public static void copy2(){
+		File f1 = new File("D:\\Data144.zip");
+		File f2 = new File("D:\\123\\Data144.zip");
+		FileInputStream in = null;
+		FileOutputStream out = null;
+		BufferedInputStream bis = null;
+		BufferedOutputStream bos = null;
+		long begin = System.currentTimeMillis();
+		long temp = begin, temp2 = begin;
+		int i = 0;
+		try {
+			in = new FileInputStream(f1);
+			out = new FileOutputStream(f2);
+			bis = new BufferedInputStream(in);
+			bos = new BufferedOutputStream(out);
+			byte[] by = new byte[4096];// 4K 2M字节
+			while(true){
+				i++;
+				temp = temp2;
+				int res = 0;
+				try {
+					res = bis.read(by);
+					if(res == -1){
+						bis.close();
+						bos.flush();
+						bos.close();
+						break;
+					}else{
+						System.out.println("res = "+res);
+						bos.write(by,0,res);
+						temp2 = System.currentTimeMillis();
+						System.out.println("i = " + i + " &spend = " + (temp2-temp));
+					}
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			long end = System.currentTimeMillis();
+			System.out.println("end-begin = " + (end-begin));
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 	

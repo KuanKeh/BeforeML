@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<accessrules>
+			<accessrule kind="accessible" pattern="**"/>
+		</accessrules>
+	</classpathentry>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="D:/jars/json-rpc-1.0.jar"/>
 	<classpathentry kind="lib" path="D:/jars/jdom-1.1.3.jar"/>
+	<classpathentry kind="lib" path="D:/jars/algs4.jar"/>
+	<classpathentry kind="lib" path="D:/jars/mysql-connector-java-5.1.44-bin.jar" sourcepath="D:/jars/mysql-connector-java-5.1.44.zip"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
