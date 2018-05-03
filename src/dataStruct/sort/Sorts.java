@@ -1,4 +1,4 @@
-package basic.sort;
+package dataStruct.sort;
 
 public class Sorts {
 
