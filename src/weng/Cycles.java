@@ -15,7 +15,6 @@ public class Cycles {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner in = new Scanner(System.in);
 		useWhile(in);
 //		useDoWhile(in);

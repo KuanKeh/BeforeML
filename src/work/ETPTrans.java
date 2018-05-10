@@ -60,10 +60,8 @@ public class ETPTrans {
             
             
         } catch (JDOMException e) {
-            // TODO 自动生成 catch 块
             e.printStackTrace();
         } catch (IOException e) {
-            // TODO 自动生成 catch 块
             e.printStackTrace();
         }
         return null;
@@ -73,7 +71,6 @@ public class ETPTrans {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 //		int i = 0;
 //		while(i<100) {
 //			System.out.println("LoopPrint = " + i++);

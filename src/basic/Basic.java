@@ -27,7 +27,6 @@ public class Basic {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		String $abc = "cccc";
 		String ff = "";
 //		System.out.println($abc);
@@ -43,7 +42,6 @@ public class Basic {
 //		try {
 //			ppt(i);
 //		} catch (MyException e) {
-//			// TODO Auto-generated catch block
 //			e.printStackTrace();
 ////			System.exit(0);
 //		}finally {

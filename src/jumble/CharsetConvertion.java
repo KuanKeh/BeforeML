@@ -78,7 +78,6 @@ public class CharsetConvertion {
             try {  
                 is.close();  
             } catch (IOException e) {  
-                // TODO Auto-generated catch block  
                 e.printStackTrace();  
             }  
         }  
@@ -87,7 +86,6 @@ public class CharsetConvertion {
             try {  
                 osw.close();  
             } catch (IOException e) {  
-                // TODO Auto-generated catch block  
                 e.printStackTrace();  
             }  
         }  
@@ -96,7 +94,6 @@ public class CharsetConvertion {
             try {  
                 os.close();  
             } catch (IOException e) {  
-                // TODO Auto-generated catch block  
                 e.printStackTrace();  
             }  
         }  

@@ -3,7 +3,6 @@ package pta.selfTest;
 public class HourglassTest1 {
 
 	public HourglassTest1() {
-		// TODO Auto-generated constructor stub
 		
 	}
 	

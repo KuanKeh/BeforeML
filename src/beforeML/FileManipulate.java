@@ -27,7 +27,6 @@ public class FileManipulate {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 //		File dir = new File("D:\\video");
 //		distribute(dir);
 		copy2();
@@ -88,14 +87,12 @@ public class FileManipulate {
 						System.out.println("i = " + i + " &spend = " + (temp2-temp));
 					}
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
 			long end = System.currentTimeMillis();
 			System.out.println("end-begin = " + (end-begin));
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -163,14 +160,12 @@ public class FileManipulate {
 								System.out.println("i = " + i + " &spend = " + (temp2-temp));
 							}
 						} catch (IOException e) {
-							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}
 					}
 					long end = System.currentTimeMillis();
 					System.out.println("end-begin = " + (end-begin));
 				} catch (FileNotFoundException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
@@ -214,14 +209,12 @@ public class FileManipulate {
 						System.out.println("i = " + i + " &spend = " + (temp2-temp));
 					}
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
 			long end = System.currentTimeMillis();
 			System.out.println("end-begin = " + (end-begin));
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

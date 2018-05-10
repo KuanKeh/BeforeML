@@ -25,7 +25,6 @@ public class Coin {
 	}
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 //		Scanner in = new Scanner(System.in);
 //		int amount = in.nextInt();
 		Coin coin = new Coin();

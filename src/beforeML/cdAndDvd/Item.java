@@ -29,14 +29,12 @@ public class Item {
 //	}
 	
 	public Item() {
-		// TODO Auto-generated constructor stub
 	}
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO 3321
 //		Item i = new DVD("1","2");
 //		Item i = new DVD();
 //		i.print();

@@ -7,7 +7,6 @@ import sun.misc.BASE64Encoder;
 public class Test {
 
 	public Test() {
-		// TODO Auto-generated constructor stub
 	}
 	
 	public static boolean rever(int x) {
@@ -26,7 +25,6 @@ public class Test {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		System.out.println(Test.rever(-121));
 		StringBuilder sb = new StringBuilder("-1");
 		System.out.println(sb.reverse());

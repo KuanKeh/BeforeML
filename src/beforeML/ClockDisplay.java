@@ -41,7 +41,6 @@ public class ClockDisplay {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 //		ClockDisplay cd = new ClockDisplay(24);
 //		while(true){
 //			cd.tick();
