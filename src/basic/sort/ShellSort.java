@@ -1,5 +1,7 @@
 package basic.sort;
 
+import dataStruct.sort.Sorts;
+
 public class ShellSort extends Sorts{
 
 	public ShellSort() {
