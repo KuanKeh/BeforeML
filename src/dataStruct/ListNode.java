@@ -7,7 +7,6 @@ public class ListNode {
 	public int num = 0;
 
 	public ListNode() {
-		// TODO Auto-generated constructor stub
 	}
 	
 	public ListNode(String node,int num) {

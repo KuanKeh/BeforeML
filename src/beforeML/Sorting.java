@@ -13,7 +13,6 @@ public class Sorting {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		int[] a = {9,27,28,0,90,15,88,36,91,96,44,9};
 //		int[] a = new int[12];
 //		for(int i = 0; i < a.length; i++ ){

@@ -3,7 +3,6 @@ package jumble;
 public class Newton {
 	private static int i = 11;
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Newton newton = new Newton();
 		System.out.println(newton.i);
 	}

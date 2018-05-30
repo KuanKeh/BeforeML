@@ -1,9 +1,8 @@
-package basic.sort;
+package dataStruct.sort;
 
 public class Sorts {
 
 	public Sorts() {
-		// TODO Auto-generated constructor stub
 	}
 	
 	static boolean less(Comparable v, Comparable w) {

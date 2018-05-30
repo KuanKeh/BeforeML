@@ -17,7 +17,6 @@ public class FileNode {
 	 * 
 	 */
 	public FileNode(String fileName,FileNode next,FileNode previous) {
-		// TODO Auto-generated constructor stub
 		this.fileName = fileName;
 		this.next = next;
 		this.previous = previous;

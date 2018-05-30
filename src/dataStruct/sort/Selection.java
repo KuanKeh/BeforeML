@@ -1,13 +1,11 @@
-package basic.sort;
+package dataStruct.sort;
 
 public class Selection extends Sorts {
 
 	public Selection() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Integer[] a = {6,7,8,4,3,5,2};
 		show(a);
 		sort(a);

@@ -70,7 +70,6 @@ public class Child extends Parent{
 		try {
 			b1 = "吃".getBytes("GB2312");
 		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		System.out.println(b1.length);
@@ -83,7 +82,6 @@ public class Child extends Parent{
 		try {
 			aa = System.in.read();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		System.out.println(aa);

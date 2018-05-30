@@ -1,18 +1,16 @@
-package basic.sort;
+package dataStruct.sort;
 
 public class BubbleSort extends Sorts{
 
 	public BubbleSort() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Integer[] a = {6,7,8,4,3,5,2};
 //		System.out.println(less(a[3],a[0]));
 //		System.out.println(a[3]+"&"+a[0]);
 		show(a);
-		sort(a);
+		newSort(a);
 		show(a);
 	}
 	
@@ -30,7 +28,7 @@ public class BubbleSort extends Sorts{
 		}
 	}
 	
-	public static void BubbleSortTrans(Comparable[] a) {
+	public static void newSort(Comparable[] a) {
 		for(int i = 0; i < a.length; i++) {
 			System.out.println("i = " + i);
 			for(int j = i+1; j < a.length; j++) {

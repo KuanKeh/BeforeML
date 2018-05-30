@@ -27,10 +27,9 @@ public class FileManipulate {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 //		File dir = new File("D:\\video");
 //		distribute(dir);
-		copy();
+		copy2();
 //		loadProperties();
 	}
 	
@@ -69,7 +68,7 @@ public class FileManipulate {
 		try {
 			in = new FileInputStream(f1);
 			out = new FileOutputStream(f2);
-			byte[] by = new byte[2097152];// 2M字节
+			byte[] by = new byte[4096];// 4K 2M字节
 			while(true){
 				i++;
 				temp = temp2;
@@ -83,19 +82,17 @@ public class FileManipulate {
 						break;
 					}else{
 						System.out.println("res = "+res);
-						out.write(by);
+						out.write(by,0,res);
 						temp2 = System.currentTimeMillis();
 						System.out.println("i = " + i + " &spend = " + (temp2-temp));
 					}
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
 			long end = System.currentTimeMillis();
 			System.out.println("end-begin = " + (end-begin));
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -163,21 +160,19 @@ public class FileManipulate {
 								System.out.println("i = " + i + " &spend = " + (temp2-temp));
 							}
 						} catch (IOException e) {
-							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}
 					}
 					long end = System.currentTimeMillis();
 					System.out.println("end-begin = " + (end-begin));
 				} catch (FileNotFoundException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
 		}
 	}
 	
-		/**
+	/**
 	 * 文件拷贝  使用buffer
 	 */
 	public static void copy2(){
@@ -214,14 +209,12 @@ public class FileManipulate {
 						System.out.println("i = " + i + " &spend = " + (temp2-temp));
 					}
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
 			long end = System.currentTimeMillis();
 			System.out.println("end-begin = " + (end-begin));
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

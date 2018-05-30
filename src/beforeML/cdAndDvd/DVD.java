@@ -19,7 +19,6 @@ public class DVD extends Item {
 	}
 
 	public DVD() {
-		// TODO Auto-generated constructor stub
 	}
 
 //	public void print(){
@@ -36,7 +35,6 @@ public class DVD extends Item {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		DVD dvd = new DVD("","");
 //		System.out.println(dvd.cc);
 

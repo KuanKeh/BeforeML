@@ -10,7 +10,6 @@ public class MyLinkedList<E> {
 	Node<E> last;
 	
 	public MyLinkedList() {
-		// TODO Auto-generated constructor stub
 	}
 	
 	private static class Node<E> {
