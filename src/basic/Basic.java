@@ -35,6 +35,7 @@ public class Basic {
 		List<String> ll3 = new Vector<String>();
 		HashMap<String,String> hm = new HashMap<String,String>();
 		Map m = new HashMap();
+		System.out.println("m.contains :" + m.containsKey("k"));
 		boolean a = true;
 		boolean b = false;
 //		System.out.println(a&&b);
@@ -64,5 +65,9 @@ public class Basic {
 		int i =0;
 		System.out.println(i+=1);
 	}
+	
+	public static Double multiply(Double a, Double b) {
+        return a * b;
+    }
 
 }
