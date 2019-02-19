@@ -20,7 +20,7 @@ public class Sorting {
 //			System.out.print(a[i] + ",");
 //		}
 //		System.out.println();
-		sort2(a);
+		sort(a);
 		for(int x : a){
 			System.out.println(x);
 		}
