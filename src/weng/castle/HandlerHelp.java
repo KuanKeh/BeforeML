@@ -3,7 +3,6 @@ package weng.castle;
 public class HandlerHelp extends Handler {
 	public HandlerHelp(Game game) {
 		super(game);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override

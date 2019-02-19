@@ -3,7 +3,6 @@ package basic;
 public class MergeSort {
 
 	public MergeSort() {
-		// TODO Auto-generated constructor stub
 	}
 
 	static int number=0;
@@ -22,7 +21,6 @@ public class MergeSort {
 	}
 	
 	private static void MergeSort(int[] a) {
-		// TODO Auto-generated method stub
 		System.out.println("开始排序");
 		Sort(a, 0, a.length - 1);
 	}
@@ -63,7 +61,6 @@ public class MergeSort {
 		}
 		
 		System.out.println("第"+(++number)+"趟排序:\t");
-		// TODO Auto-generated method stub
 		//从临时数组拷贝到原数组
 		while(cIndex<=right){
 			a[cIndex]=tmp[cIndex];

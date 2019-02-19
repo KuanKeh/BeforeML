@@ -26,7 +26,6 @@ public class Begin {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 //		Scanner in = new Scanner(System.in);
 //		System.out.println(s1.offsetByCodePoints(index, codePointOffset));
 //		String s1 = "abcdefghij";
@@ -137,14 +136,12 @@ public class Begin {
 //			bw = new BufferedWriter(new FileWriter("D:\\testjavawrit1e.txt",true));//新内容增加在原文件后
 			bw.write("22f");
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}finally{
 			if(bw!=null){
 				try {
 					bw.close();
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
@@ -203,7 +200,6 @@ public class Begin {
 			String s = new SimpleDateFormat("yyyy-MM-dd").format(d);
 			System.out.println(s);
 		} catch (ParseException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

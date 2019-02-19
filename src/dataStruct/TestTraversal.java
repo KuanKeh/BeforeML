@@ -7,7 +7,6 @@ public class TestTraversal {
 	LinkedList<ListNode> list = new LinkedList<ListNode>();
 	
 	public TestTraversal() {
-		// TODO Auto-generated constructor stub
 	}
 	
 	public static void main(String[] args) {

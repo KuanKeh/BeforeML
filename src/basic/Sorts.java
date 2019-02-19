@@ -3,11 +3,9 @@ package basic;
 public class Sorts {
 
 	public Sorts() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		int[] a = {3,2,1,0};
 		Sorts.sorts(a);
 

@@ -3,11 +3,9 @@ package dataStruct.sort;
 public class BubbleSort extends Sorts{
 
 	public BubbleSort() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Integer[] a = {6,7,8,4,3,5,2};
 //		System.out.println(less(a[3],a[0]));
 //		System.out.println(a[3]+"&"+a[0]);
