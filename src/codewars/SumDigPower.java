@@ -29,6 +29,15 @@ public class SumDigPower {
 		
 		return list;
 	}
+	public static long digPow(int n, int p) {
+		// your code
+	    long sum = 0;
+	    for(char c : (""+n).toCharArray()){
+	    	sum += Math.pow(c-'0',p++);
+	    }
+	    
+	    return (sum%n==0)?(sum/n):-1;
+	}
 	
 	public static List<Long> sumDigPow2(long a, long b){
 		List<Long> list = new LinkedList<Long>();
