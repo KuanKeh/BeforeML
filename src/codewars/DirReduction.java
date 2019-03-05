@@ -52,7 +52,45 @@ public class DirReduction {
 	
 	public static void main(String[] args) {
 		String[] ins1 = {"NORTH","SOUTH","SOUTH","EAST","WEST","NORTH","WEST"};
-		String[] ins2 = {"NORTH","SOUTH","SOUTH","EAST","WEST","NORTH"};
-		prinn(dirReduc2(ins1));
+//		String[] ins2 = {"NORTH","SOUTH","SOUTH","EAST","WEST","NORTH"};
+		prinn(dirReduc3(ins1));
+		Stack<String> stack = new Stack<String>();
+		stack.push("1");
+		stack.push("2");
+		stack.push("3");
+		stack.push("4");
+		stack.pop();
+		System.out.println(stack);
+		
+		String a = "hello2";
+
+		final String b = "hello";
+
+		String c = "hello";
+
+
+
+		System.out.println(a==(b+2));
+
+		System.out.println(a==(c+2));
+	}
+	
+	public static String[] dirReduc3(String[] arr) {
+		Stack<String> stack = new Stack<String>();
+		for(String direction : arr) {
+			String last = stack.size() > 0 ? stack.lastElement() : null;
+			switch(direction) {
+				case "NORTH" :
+					if("SOUTH".equals(last)) stack.pop(); else stack.push(direction);break;
+				case "SOUTH" :
+					if("NORTH".equals(last)) stack.pop(); else stack.push(direction);break;
+				case "WEST" :
+					if("EAST".equals(last)) stack.pop(); else stack.push(direction);break;
+				case "EAST" :
+					if("WEST".equals(last)) stack.pop(); else stack.push(direction);break;
+			
+			}
+		}
+		return stack.stream().toArray(String[]::new);
 	}
 }
