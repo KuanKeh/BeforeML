@@ -34,6 +34,13 @@ public class Test {
 		LinkedList<String> l = new LinkedList<String>();
 		l.add("abc");
 		l.add("ef");
+		
+		String source = "";
+		char[] abc = source.toCharArray();
+		System.out.println(abc.length);
+		System.out.println(abc[0]);
+		abc[0] = 'c';
+		System.out.println(String.valueOf(abc));
 	}
 
 }
