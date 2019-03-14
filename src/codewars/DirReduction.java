@@ -64,18 +64,6 @@ public class DirReduction {
 		stack.push("4");
 		stack.pop();
 		System.out.println(stack);
-		
-		String a = "hello2";
-
-		final String b = "hello";
-
-		String c = "hello";
-
-
-
-		System.out.println(a==(b+2));
-
-		System.out.println(a==(c+2));
 	}
 	
 	public static String[] dirReduc3(String[] arr) {
