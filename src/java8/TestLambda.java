@@ -26,7 +26,7 @@ public class TestLambda {
 		
 		String s = "001";
 		char c = s.charAt(0);
-		System.out.println(s.charAt(0)=='0');
+		System.out.println('0'-0);
 	}
 
 }
