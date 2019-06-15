@@ -3,6 +3,7 @@ package codewars;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
+import java.util.function.Supplier;
 
 public class DirReduction {
 	public static String[] dirReduc(String[] arr) {
@@ -40,6 +41,8 @@ public class DirReduction {
 				case "WEST":  if ("EAST".equals(lastElement)) { stack.pop(); } else { stack.push(direction); } break;
 			}
 		}
+//		Supplier<String[]> s = String[]::new;
+		Supplier<String> s = String::new;
 		return stack.stream().toArray(String[]::new);
     }
 	

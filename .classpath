@@ -10,5 +10,6 @@
 	<classpathentry kind="lib" path="D:/jars/jdom-1.1.3.jar" sourcepath="D:/jars/jdom-1.1.3.zip"/>
 	<classpathentry kind="lib" path="D:/jars/algs4.jar"/>
 	<classpathentry kind="lib" path="D:/jars/mysql-connector-java-5.1.44-bin.jar" sourcepath="D:/jars/mysql-connector-java-5.1.44.zip"/>
+	<classpathentry kind="lib" path="D:/jars/log4j-1.2.17.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
