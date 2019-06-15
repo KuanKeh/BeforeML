@@ -11,4 +11,8 @@ public class LambdaImpl implements LambdaInterface {
 		// TODO Auto-generated method stub
 		System.out.println("key is " + s);
 	}
+	
+	public static void goStatic() {
+		
+	}
 }
