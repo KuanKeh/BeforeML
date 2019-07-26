@@ -89,4 +89,33 @@ public class Test {
 			}
 		}
 	}
+	
+	public static void string() {
+        String s1 = "Programming";
+        String s2 = new String("Programming");
+        String s3 = "Program";
+        String s4 = "ming";
+        String s5 = "Program" + "ming";
+        String s6 = s3 + s4;
+        System.out.println(s1 == s2);//F
+        System.out.println(s1 == s5);//T
+        System.out.println(s1 == s6);//F
+//        System.out.println(s1 == s6.intern());//T
+//        System.out.println(s2 == s2.intern());//F
+        System.out.println(s1 == s2.intern());//T
+        System.out.println(s1 == s5.intern());//T
+        System.out.println(s1 == s6.intern());//T
+//        System.out.println(s1 == s2.intern());
+	}
+	
+	public static void string2() {
+		 String s1 = new String("1"); 
+		 String s3 = s1.intern(); 
+		 String s2 = "1"; 
+		 System.out.println("=============string2 start=============");
+		 System.out.println(s1 == s2); //false
+		 System.out.println(s2 == s3); //true
+		 System.out.println(s1 == s3); //false
+		 System.out.println("=============string2 end=============");
+	}
 }
