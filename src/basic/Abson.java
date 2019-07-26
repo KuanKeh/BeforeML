@@ -2,6 +2,8 @@ package basic;
 
 public class Abson extends Abfather {
 
+	protected String name = "son";
+	
 	public Abson() {
 		// TODO Auto-generated constructor stub
 	}

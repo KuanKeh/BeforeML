@@ -39,6 +39,13 @@ public class Test {
 	}
 
 	public static void main(String[] args) {
+		string2();
+//		System.out.println(?;
+		Abfather father = new Abson();
+		System.out.println("father name : " + father.name);
+		System.out.println("father age : " + father.age);
+		
+		four();
 		
 		StringBuilder sbd = new StringBuilder("kk");
 		System.out.println(sbd.toString());
@@ -46,13 +53,12 @@ public class Test {
 		System.out.println(sbd.toString());
 		System.out.println("test:" + Father.age);
 		
-		
 //		System.out.println(Test.rever(-121));
 //		StringBuilder sb = new StringBuilder("-1");
 //		System.out.println(sb.reverse());
 //		String a = "试图转成base64";
 //		BASE64Encoder ba = new BASE64Encoder();
-//		System.out.println(ba.encode(a.getBytes()));
+//		System.out.println("base64 encode:" + ba.encode(a.getBytes()));
 //		LinkedList<String> l = new LinkedList<String>();
 //		l.add("abc");
 //		l.add("ef");
@@ -62,6 +68,7 @@ public class Test {
 //		System.out.println(abc.length);
 //		System.out.println(abc[0]);
 //		abc[0] = 'c';
+//		System.out.println(abc[0]);
 //		System.out.println(String.valueOf(abc));
 	}
 
