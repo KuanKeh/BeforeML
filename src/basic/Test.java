@@ -44,11 +44,8 @@ public class Test {
 		Abfather father = new Abson();
 		System.out.println("father name : " + father.name);
 		System.out.println("father age : " + father.age);
-<<<<<<< HEAD
 		
 		four();
-=======
->>>>>>> branch 'master' of https://github.com/KuanKeh/BeforeML
 		
 		StringBuilder sbd = new StringBuilder("kk");
 		System.out.println(sbd.toString());
@@ -72,11 +69,8 @@ public class Test {
 //		System.out.println(abc[0]);
 //		abc[0] = 'c';
 //		System.out.println(abc[0]);
-<<<<<<< HEAD
 //		System.out.println(String.valueOf(abc));
-=======
-//		System.out.println(String.valueOf(abc));
->>>>>>> branch 'master' of https://github.com/KuanKeh/BeforeML
+
 	}
 
 	static void four(){
