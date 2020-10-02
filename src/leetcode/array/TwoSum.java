@@ -24,7 +24,7 @@ public class TwoSum {
         }
         return vector;
     }
-    //test1
+    //test12
     public static void main(String[] args) {
         int[] nums = {3,3};
         int target = 6;
