@@ -31,9 +31,9 @@ public class Test {
 	public static void changeSbd(StringBuilder sbd) {
 		sbd.append("aa");
 	}
-	public static int overload(List<String> list) {//javac 1.6
-		return 1;
-	}
+//	public static int overload(List<String> list) {//javac 1.6
+//		return 1;
+//	}
 	public static String overload(List<Integer> list) {//javac 1.6
 		return "";
 	}
