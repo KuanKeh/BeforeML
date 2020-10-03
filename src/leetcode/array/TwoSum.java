@@ -1,7 +1,5 @@
 package leetcode.array;
 
-import java.util.Vector;
-
 public class TwoSum {
     public int[] twoSum(int[] nums, int target) {
         int[] vector = new int[2];
