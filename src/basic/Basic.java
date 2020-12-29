@@ -19,7 +19,7 @@ public class Basic {
 	public static void ppt(int i) throws MyException {
 		if(i==0) {
 			System.out.println("i is zero");
-		}else {
+		} else {
 			throw new MyException("i is not zero");
 		}
 	}
