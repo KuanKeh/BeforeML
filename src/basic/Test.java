@@ -2,6 +2,7 @@ package basic;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Random;
 
 import sun.misc.BASE64Encoder;
 
@@ -39,6 +40,8 @@ public class Test {
 	}
 
 	public static void main(String[] args) {
+		int random = new Random().nextInt(100);
+		System.out.println("random = " + random);
 		string2();
 //		System.out.println(?;
 		Abfather father = new Abson();
